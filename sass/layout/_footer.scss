@@ -1,0 +1,48 @@
+/***** FOOTER *****/
+
+.footer{
+    padding: 30px 20px;
+    color: white;
+    background-color: #353535;
+        h2{
+            margin-bottom: 20px;
+            font-family: $title-font;
+            font-weight: 400;
+            @media screen and (min-width: 1300px) {
+                text-align: center;
+            }
+        }
+        &__nav{
+            margin: 10px 0;
+            list-style-type: none;
+            @media screen and (min-width: 1300px) {
+                display: flex;
+                justify-content: center;
+            }
+            li{
+                margin-bottom: 3px;
+                @media screen and (min-width: 1300px) {
+                    margin: 0 40px;
+                    display: flex;
+                }
+                    &:nth-child(1)::before{
+                        content: '\f2e7';
+                        font-family: 'FontAwesome';
+                        margin-right: 10px;
+                        font-size: clamp(1.3rem, 2vw, 1.7rem);
+                    }
+                    &:nth-child(2)::before{
+                        content: '\f4c4';
+                        font-family: 'FontAwesome';
+                        margin-right: 10px;
+                        font-size: clamp(1.3rem, 2vw, 1.7rem);
+                    }
+                    a{
+                        transition: color 0.4s ease-in-out;
+                        &:hover, &:focus{
+                            color: $main-color;
+                            }
+                    }
+            }
+        }
+  }
