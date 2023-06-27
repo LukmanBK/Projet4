@@ -1,0 +1,364 @@
+/****** VARIABLE COULEUR ******/
+
+$main-color: #9356dc;
+$light-main-color: lighten($main-color, 5%);
+$secondary-color: #ff79da;
+$light-secondary-color: lighten($secondary-color, 5%);
+$tertiary-color: #99e2d0;
+$grey-background: #eaeaea;
+$grey-footer: #353535;
+$white-color: #ffffff;
+$gradient: linear-gradient(to bottom, $secondary-color, $main-color 80%);
+$light-gradient: linear-gradient(to bottom, $light-secondary-color, $light-main-color 80%);
+
+$text-font: "Roboto", sans-serif;
+$title-font: "Shrikhand", cursive;
+$font-size: 16px;
+
+/****** MIXIN *****/
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin buttonStyle {
+  padding: 20px;
+  border: none;
+  border-radius: 30px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  color: white;
+  font-weight: 400;
+  background: $gradient;
+  text-decoration: none;
+  transition: all 300ms ease-out;
+}
+
+@mixin buttonHover {
+  box-shadow: 3px 3px 3px black ;
+  background: $light-gradient;
+}
+
+@mixin logo-fonctionnement {
+  font-family: "FontAwesome";
+  margin-left: 30px;
+  margin-right: 10px;
+  width: 30px;
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  color: #00000063;
+  @media screen and (min-width: 768px) {
+    margin-left: 0;
+    margin-right: 30px;
+  }
+}
+@mixin box-shadow {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+@mixin heart {
+  content: "\f004";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  transition: 500ms all ease-in ;
+}
+
+@mixin heartSolid {
+  background: $gradient;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/****** HEADER ******/
+
+body {
+  font-size: $font-size;
+  font-family: $text-font;
+}
+
+.header {
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  @include flexCenter;
+  @media screen and (min-width: 768px) {
+    height: 80px;
+  }
+  img {
+    width: 50%;
+    padding: 14px 0px 5px;
+    @media screen and (min-width: 768px) {
+    }
+  }
+}
+
+img{
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.nouveau{
+  position: relative;
+      &::before{
+          content: 'Nouveau';
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          top: 20px;
+          right: 20px;
+          border-radius: 5px;
+          padding: 10px 15px;
+          font-weight: 500;
+          color: darken($tertiary-color, 40%);
+          background-color: $tertiary-color;
+      }
+}
+
+a{
+  font-size: clamp(1.3rem, 2vw, 0.8rem);
+  text-decoration: none;
+  color: inherit;
+}
+
+*, ::before, ::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/****** MAIN ******/
+
+.main {
+  &__location {
+    height: 50px;
+    font-weight: 400;
+    background-color: #eaeaea;
+    @include flexCenter;
+    p::before {
+      content: "\f3c5";
+      font-family: "FontAwesome";
+      margin-right: 15px;
+    }
+  }
+  &__description {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #f6f6f6;
+    @include flexCenter;
+    &__title{
+      font-weight: 700;
+      font-size: 24px;
+      width: 75%;
+    }
+    &__text {
+      margin: 15px 0 35px;
+      font-weight: 300;
+    }
+    &__button {
+      font-size: 16px;
+      @include buttonStyle;
+      @media screen and (min-width: 768) {
+        padding: 20px;
+        @include box-shadow;
+      }
+
+      &:hover {
+        @include buttonHover;
+      }
+    }
+  }
+  &__fonctionnement {
+    @include flexCenter;
+    flex-direction: column;
+    padding: 40px 20px;
+    h2 {
+      align-self: flex-start;
+      margin-bottom: 25px;
+      @media screen and (min-width: 768px) {
+        align-self: center;
+      }
+    }
+    &__step {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex-direction: row-reverse;
+      position: relative;
+      width: 100%;
+      max-width: 691px;
+      margin-bottom: 25px;
+      padding: 15px 15px 15px 0;
+      border-radius: 20px;
+      cursor: pointer;
+      background-color: #f6f6f6;
+      @media screen and (min-width: 768px) {
+        justify-content: center;
+      }
+      div {
+        @include flexCenter;
+        position: absolute;
+        left: -12px;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        font-size: 14.1818px;
+        color: white;
+        background-color: $main-color;
+        @media screen and (min-width: 768px) {
+          width: 35px;
+          height: 35px;
+        }
+      }
+      p {
+        font-size: 1.1em;
+      }
+      &:nth-child(2)::after {
+        content: "\f3cf";
+        @include logo-fonctionnement;
+      }
+      &:nth-child(3)::after {
+        content: "\f03a";
+        @include logo-fonctionnement;
+      }
+      &:nth-child(4)::after {
+        content: "\f54e";
+        @include logo-fonctionnement;
+      }
+      &:focus div {
+        display: none;
+      }
+      &:hover,
+      &:focus {
+        background-color: lighten($main-color, 35%);
+        &:hover::after,
+        &:focus::after {
+          color: $main-color;
+        }
+      }
+    }
+  }
+  .main__restaurant {
+    padding: 50px 20px 40px;
+    background-color: #f6f6f6;
+    h2 {
+      margin-bottom: 10px;
+      @media screen and (min-width: 768px) {
+        text-align: center;
+      }
+    }
+    .card {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0 50px;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 2000px;
+
+      a {
+        width: 100%;
+        max-width: 650px;
+        height: 300px;
+        border-radius: 20px;
+        overflow: hidden;
+        margin: 20px 0;
+        color: black;
+        @include box-shadow;
+        figure {
+          height: 70%;
+          @include flexCenter;
+        }
+        p {
+          font-weight: 300;
+        }
+      }
+      &__info {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 30%;
+        padding: 10px 15px;
+        h3 {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        &__heart {
+          @include flexCenter;
+          width: 30px;
+          height: 30px;
+          &::before {
+            @include heart;
+          }
+          &::after {
+            @include heart;
+            @include heartSolid;
+          }
+          &:hover::before {
+            color: transparent;
+          }
+          &:hover::after {
+            font-weight: 900;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer{
+  padding: 30px 20px;
+  color: white;
+  background-color: #353535;
+      h2{
+          margin-bottom: 20px;
+          font-family: $title-font;
+          font-weight: 400;
+          @media screen and (min-width: 1300px) {
+              text-align: center;
+          }
+      }
+      &__nav{
+          margin: 10px 0;
+          list-style-type: none;
+          @media screen and (min-width: 1300px) {
+              display: flex;
+              justify-content: center;
+          }
+          li{
+              margin-bottom: 3px;
+              @media screen and (min-width: 1300px) {
+                  margin: 0 40px;
+                  display: flex;
+              }
+                  &:nth-child(1)::before{
+                      content: '\f2e7';
+                      font-family: 'FontAwesome';
+                      margin-right: 10px;
+                      font-size: clamp(1.3rem, 2vw, 1.7rem);
+                  }
+                  &:nth-child(2)::before{
+                      content: '\f4c4';
+                      font-family: 'FontAwesome';
+                      margin-right: 10px;
+                      font-size: clamp(1.3rem, 2vw, 1.7rem);
+                  }
+                  a{
+                      transition: color 0.4s ease-in-out;
+                      &:hover, &:focus{
+                          color: $main-color;
+                          }
+                  }
+          }
+      }
+}
+
