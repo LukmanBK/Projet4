@@ -4,24 +4,29 @@
     padding: 30px 20px;
     color: white;
     background-color: #353535;
+    @media screen and (min-width: 1073px) {
+        display: flex;
+    }
         h2{
             margin-bottom: 20px;
             font-family: $title-font;
             font-weight: 400;
-            @media screen and (min-width: 1300px) {
-                text-align: center;
+            @media screen and (min-width: 1073px) {
+                display: flex;
+                order: 1;
+                padding-left: 30px;
             }
         }
         &__nav{
             margin: 10px 0;
             list-style-type: none;
-            @media screen and (min-width: 1300px) {
+            @media screen and (min-width: 1073px) {
                 display: flex;
-                justify-content: center;
+                justify-content:center;
             }
             li{
                 margin-bottom: 3px;
-                @media screen and (min-width: 1300px) {
+                @media screen and (min-width: 1073px) {
                     margin: 0 40px;
                     display: flex;
                 }

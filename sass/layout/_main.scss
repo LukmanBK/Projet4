@@ -1,114 +1,119 @@
 /***** MAIN *****/
 
 .main {
-    &__location {
-      height: 50px;
-      font-weight: 400;
-      background-color: #eaeaea;
-      @include flexCenter;
-      p::before {
-        content: "\f3c5";
-        font-family: "FontAwesome";
-        margin-right: 15px;
-      }
-    }
-    &__description {
-      flex-direction: column;
-      text-align: center;
-      padding: 30px 20px;
-      background-color: #f6f6f6;
-      @include flexCenter;
-      &__title{
-        font-weight: 700;
-        font-size: 24px;
-        width: 75%;
-      }
-      &__text {
-        margin: 15px 0 35px;
-        font-weight: 300;
-      }
-     
-    }
-    &__fonctionnement {
-      @include flexCenter;
-      flex-direction: column;
-      padding: 40px 20px;
-      h2 {
-        align-self: flex-start;
-        margin-bottom: 25px;
-        @media screen and (min-width: 768px) {
-          align-self: center;
-        }
-      }
-      &__step {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        flex-direction: row-reverse;
-        position: relative;
-        width: 100%;
-        max-width: 691px;
-        margin-bottom: 25px;
-        padding: 15px 15px 15px 0;
-        border-radius: 20px;
-        cursor: pointer;
-        background-color: #f6f6f6;
-        @media screen and (min-width: 768px) {
-          justify-content: center;
-        }
-        div {
-          @include flexCenter;
-          position: absolute;
-          left: -12px;
-          width: 25px;
-          height: 25px;
-          border-radius: 50%;
-          font-size: 14.1818px;
-          color: white;
-          background-color: $main-color;
-          @media screen and (min-width: 768px) {
-            width: 35px;
-            height: 35px;
-          }
-        }
-        p {
-          font-size: 1.1em;
-        }
-        &:nth-child(2)::after {
-          content: "\f3cf";
-          @include logo-fonctionnement;
-        }
-        &:nth-child(3)::after {
-          content: "\f03a";
-          @include logo-fonctionnement;
-        }
-        &:nth-child(4)::after {
-          content: "\f54e";
-          @include logo-fonctionnement;
-        }
-        &:focus div {
-          display: none;
-        }
-        &:hover,
-        &:focus {
-          background-color: lighten($main-color, 35%);
-          &:hover::after,
-          &:focus::after {
-            color: $main-color;
-          }
-        }
-      }
-    }
-    .main__restaurant {
-      padding: 50px 20px 40px;
-      background-color: #f6f6f6;
-      h2 {
-        margin-bottom: 10px;
-        @media screen and (min-width: 768px) {
-          text-align: center;
-        }
-      }
-     
+  &__location {
+    height: 50px;
+    font-weight: 400;
+    background-color: #eaeaea;
+    @include flexCenter;
+    p::before {
+      content: "\f3c5";
+      font-family: "FontAwesome";
+      margin-right: 15px;
     }
   }
-  
+  &__description {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #f6f6f6;
+    @include flexCenter;
+    &__title {
+      font-weight: 700;
+      font-size: 24px;
+      width: 75%;
+    }
+    &__text {
+      margin: 15px 0 35px;
+      font-weight: 300;
+    }
+  }
+  &__fonctionnement {
+    @include flexCenter;
+    flex-direction: column;
+    padding: 40px 20px;
+    h2 {
+      align-self: flex-start;
+      margin-bottom: 25px;
+      @media screen and (min-width: 768px) {
+      }
+    }
+    &__content {
+      @media screen and (min-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+        width: 100%;
+        padding: 50px 180px 50px 180px;
+      }
+    }
+    &__step {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex-direction: row-reverse;
+      position: relative;
+      width: 100%;
+      max-width: 691px;
+      margin-bottom: 25px;
+      padding: 15px 15px 15px 0;
+      border-radius: 20px;
+      cursor: pointer;
+      background-color: #f6f6f6;
+      @media screen and (min-width: 768px) {
+        justify-content: center;
+      }
+      div {
+        @include flexCenter;
+        position: absolute;
+        left: -12px;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        font-size: 14.1818px;
+        color: white;
+        background-color: $main-color;
+        @media screen and (min-width: 768px) {
+          width: 35px;
+          height: 35px;
+        }
+      }
+      p {
+        font-size: 1.1em;
+      }
+      &:nth-child(1)::after {
+        content: "\f3cf";
+        @include logo-fonctionnement;
+      }
+      &:nth-child(2)::after {
+        content: "\f03a";
+        @include logo-fonctionnement;
+      }
+      &:nth-child(3)::after {
+        content: "\f54e";
+        @include logo-fonctionnement;
+      }
+      &:focus div {
+        display: none;
+      }
+      &:hover,
+      &:focus {
+        background-color: lighten($main-color, 35%);
+        &:hover::after,
+        &:focus::after {
+          color: $main-color;
+        }
+      }
+    }
+  }
+  .main__restaurant {
+    padding: 50px 20px 40px;
+    background-color: #f6f6f6;
+    h2 {
+      margin-bottom: 10px;
+      @media screen and (min-width: 768px) {
+        text-align: center;
+      }
+    }
+  }
+}

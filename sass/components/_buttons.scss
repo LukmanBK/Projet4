@@ -1,12 +1,12 @@
 .main__description__button {
-    font-size: 16px;
-    @include buttonStyle;
-    @media screen and (min-width: 768) {
-      padding: 20px;
-      @include box-shadow;
-    }
+  font-size: 16px;
+  @include buttonStyle;
+  @media screen and (min-width: 768) {
+    padding: 20px;
+    @include box-shadow;
+  }
 
-    &:hover {
-      @include buttonHover;
-    }
-   }
+  &:hover {
+    @include buttonHover;
+  }
+}
