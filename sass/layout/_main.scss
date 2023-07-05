@@ -63,6 +63,10 @@
       @media screen and (min-width: 768px) {
         justify-content: center;
       }
+
+      &::after{
+        transition: all 0.3s;
+      }
       div {
         @include flexCenter;
         position: absolute;
@@ -98,7 +102,6 @@
       }
       &:hover,
       &:focus {
-        background-color: lighten($main-color, 35%);
         &:hover::after,
         &:focus::after {
           color: $main-color;

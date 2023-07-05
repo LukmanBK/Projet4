@@ -1,10 +1,12 @@
 @import "utils/variables";
 @import "utils/mixins";
+@import "utils/animations";
 @import "base/typography";
 @import "components/flag";
 @import "layout/main";
 @import "layout/footer";
 @import "layout/header";
+@import "layout/loader";
 @import "base/reset";
 @import "components/buttons";
 @import "components/cards";
