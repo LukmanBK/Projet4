@@ -44,6 +44,7 @@
         justify-content: space-between;
       }
       &__heart {
+        font-weight: 400;
         @include flexCenter;
         width: 30px;
         height: 30px;
