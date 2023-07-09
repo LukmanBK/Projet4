@@ -57,6 +57,7 @@
       flex-direction: row-reverse;
       position: relative;
       width: 100%;
+      height: 72px;
       max-width: 1000px;
       margin-bottom: 25px;
       padding: 15px 15px 15px 0;
@@ -89,6 +90,7 @@
       }
       p {
         font-size: 1.1em;
+        margin-right: 15px;
       }
       &:nth-child(1)::after {
         content: "\f3cf";
