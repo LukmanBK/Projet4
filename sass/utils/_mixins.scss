@@ -40,11 +40,11 @@
   margin-left: 30px;
   margin-right: 10px;
   width: 30px;
-  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
   color: #00000063;
   @media screen and (min-width: 768px) {
-    margin-left: 0;
-    margin-right: 30px;
+    margin-left: 10px;
+    margin-right: 20px;
   }
 }
 @mixin box-shadow {

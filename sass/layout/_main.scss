@@ -57,32 +57,34 @@
       flex-direction: row-reverse;
       position: relative;
       width: 100%;
-      max-width: 691px;
+      max-width: 1000px;
       margin-bottom: 25px;
       padding: 15px 15px 15px 0;
       border-radius: 20px;
       cursor: pointer;
       background-color: #f6f6f6;
-      @media screen and (min-width: 768px) {
-        justify-content: center;
+      @media screen and (min-width: 1073px) {
+       justify-content: center;
+       width: 30%;
+       height: 72.38px;
       }
 
-      &::after{
+      &::after {
         transition: all 0.3s;
       }
       div {
         @include flexCenter;
         position: absolute;
-        left: -12px;
-        width: 25px;
-        height: 25px;
+        left: -10px;
+        width: 23px;
+        height: 23px;
         border-radius: 50%;
         font-size: 14.1818px;
         color: white;
         background-color: $main-color;
-        @media screen and (min-width: 768px) {
-          width: 35px;
-          height: 35px;
+        @media screen and (min-width: 1073px) {
+          width: 28px;
+          height: 28px;
         }
       }
       p {
@@ -91,14 +93,27 @@
       &:nth-child(1)::after {
         content: "\f3cf";
         @include logo-fonctionnement;
+        @media screen and (min-width: 768px) {
+          margin-left: 20px;
+          margin-right: 5px;
+        }
       }
       &:nth-child(2)::after {
         content: "\f03a";
         @include logo-fonctionnement;
+        @media screen and (min-width: 768px) {
+          margin-left: 20px;
+          margin-right: 5px;
+        }
       }
+
       &:nth-child(3)::after {
         content: "\f54e";
         @include logo-fonctionnement;
+        @media screen and (min-width: 768px) {
+          margin-left: 20px;
+          margin-right: 5px;
+        }
       }
       &:focus div {
         display: none;
@@ -119,7 +134,7 @@
       margin-bottom: 10px;
       @media screen and (min-width: 768px) {
         text-align: start;
-      margin-left: 12px;
+        margin-left: 12px;
       }
     }
   }
