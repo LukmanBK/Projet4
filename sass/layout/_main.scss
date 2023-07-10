@@ -32,15 +32,19 @@
     @include flexCenter;
     flex-direction: column;
     padding: 40px 20px;
+    @media screen and (min-width: 1073px) {
+     align-items: center;
+     }
     h2 {
       align-self: flex-start;
       margin-bottom: 25px;
       margin-left: 12px;
-      @media screen and (min-width: 768px) {
-        justify-content: flex-start;
+      @media screen and (min-width: 1073px) {
+       padding-right: 73%;
       }
     }
     &__content {
+      width: 100%;
       @media screen and (min-width: 1073px) {
         display: flex;
         flex-direction: row;
@@ -132,11 +136,15 @@
   .main__restaurant {
     padding: 50px 20px 40px;
     background-color: #f6f6f6;
+    @media screen and (min-width: 1073px) {
+     align-items: center;
+    }
     h2 {
       margin-bottom: 10px;
+      align-self: flex-start;
       @media screen and (min-width: 768px) {
-        text-align: start;
-        margin-left: 12px;
+        text-align: center;
+        padding-right: 74%;
       }
     }
   }
