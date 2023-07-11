@@ -8,3 +8,12 @@
         visibility: hidden;
     }
 }
+
+@keyframes meal {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

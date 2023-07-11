@@ -1,0 +1,15 @@
+.loader{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $white-color;
+    z-index: 9999;
+    @include flexCenter;
+transition: opacity 0.3s;
+animation: loader 0.3s 3s 1 forwards ;
+    i{
+        font-size: 4rem;
+    }
+}
