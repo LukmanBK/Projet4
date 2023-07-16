@@ -10,7 +10,8 @@ $grey-footer: #353535;
 $white-color: #ffffff;
 $black-color: #222222;
 $restaurant-background: #f6f6f6;
-$gradient: linear-gradient(to bottom, $secondary-color, $main-color 80%);
+$gradient: linear-gradient(to top, $secondary-color, $main-color 80%);
+$gradient-button: linear-gradient(to bottom, $secondary-color, $main-color 80%);
 $light-gradient: linear-gradient(
   to bottom,
   $light-secondary-color,

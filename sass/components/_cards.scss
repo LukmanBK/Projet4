@@ -1,67 +1,67 @@
 /***** Cards de la section restaurant *****/
 
 .card {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0 50px;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1000px;
-    @media screen and (min-width: 1073px) {
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  grid-gap: 3rem;
-    }
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0 50px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
+  @media screen and (min-width: 1073px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+  }
 
-    a {
-      width: 100%;
-      max-width: 650px;
-      height: 300px;
-      border-radius: 20px;
-      overflow: hidden;
-      margin: 20px 0;
-      
-      @include box-shadow;
-      figure {
-        height: 70%;
-        @include flexCenter;
-      }
-      p {
-        font-weight: 300;
-      }
+  a {
+    width: 100%;
+    max-width: 650px;
+    height: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 20px 0;
+
+    @include box-shadow;
+    figure {
+      height: 70%;
+      @include flexCenter;
     }
-    &__info {
-      position: relative;
+    p {
+      font-weight: 300;
+    }
+  }
+  &__info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 30%;
+    padding: 10px 15px;
+    h3 {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      height: 30%;
-      padding: 10px 15px;
-      h3 {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &__heart {
+      font-weight: 400;
+      @include flexCenter;
+      width: 30px;
+      height: 30px;
+      &::before {
+        @include heart;
       }
-      &__heart {
-        font-weight: 400;
-        @include flexCenter;
-        width: 30px;
-        height: 30px;
-        &::before {
-          @include heart;
-        }
-        &::after {
-          @include heart;
-          @include heartSolid;
-        }
-        &:hover::before {
-          color: transparent;
-        }
-        &:hover::after {
-          font-weight: 900;
-          opacity: 1;
-        }
+      &::after {
+        @include heart;
+        @include heartSolid;
+      } 
+      &:hover::before {
+        color: transparent;
+      }
+      &:hover::after {
+        font-weight: 900;
+        opacity: 1;
       }
     }
   }
+}
